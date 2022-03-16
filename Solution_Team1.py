@@ -95,7 +95,12 @@ class Planner():
     RED_exists = self.wait_for_state_update(targets[0], box_is_known=True)
     BLUE_exists = self.wait_for_state_update(targets[1], box_is_known=True)
     GREEN_exists = self.wait_for_state_update(targets[2], box_is_known=True)
-    SpawnBox = RED_exists and BLUE_exists and GREEN_exists 
+    SpawnBox = RED_exists and BLUE_exists and GREEN_exists
+    
+#     DEPORED_exists = self.wait_for_state_update(targets[0], box_is_known=True)
+#     DEPOBLUE_exists = self.wait_for_state_update(targets[1], box_is_known=True)
+#     DEPOGREEN_exists = self.wait_for_state_update(targets[2], box_is_known=True)
+#     SpawnDepo = DEPORED_exists and DEPOBLUE_exists and DEPOGREEN_exists
     return SpawnBox #Devuelve un bool
 
   def goToPose(self,pose_goal):
